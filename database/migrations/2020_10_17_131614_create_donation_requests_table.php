@@ -13,7 +13,7 @@ class CreateDonationRequestsTable extends Migration {
 			$table->string('patient_name');
 			$table->string('patient_phone');
 			$table->string('hospital_name');
-			$table->integer('patient_age');
+			$table->date('patient_age');
 			$table->integer('bags_number');
 			$table->string('hospital_address');
 			$table->text('details');

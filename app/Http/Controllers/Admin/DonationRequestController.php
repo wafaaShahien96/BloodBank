@@ -19,7 +19,7 @@ class DonationRequestController extends Controller
     }
 
     public function create(){
-        return view('admin.donationRequest.create')->with('cities' ,City::all())->with('clients' ,Client::all());
+        return view('admin.donationRequest.create')->with('cities' ,City::all())->with('clients' ,Client::all())->with('bloodTypes' ,BloodType::all());
     }
 
     public function store(StoreDonationRequestRequest $request , DonationRequest $donationRequest){

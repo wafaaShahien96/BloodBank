@@ -40,7 +40,7 @@
 
       <div class="form-group">
         <label for="patient_age">Patient Age</label>
-        <input type="text" class="form-control" id="patient_age" name="patient_age" placeholder="patient_age" >
+        <input type="date" class="form-control" id="patient_age" name="patient_age" placeholder="patient_age" >
       </div>
 
       <div class="form-group">
@@ -58,19 +58,15 @@
             <input type="text" class="form-control" id="details" name="details" placeholder="details" >
           </div>
 
-    <div class="form-group">
-        <label for="blood_type_id">Blood Type</label>
-        <select  class="custom-select" type="text" id="blood_type_id" name="blood_type_id">
-            <option value="1">O-</option>
-            <option value="2">O</option>
-            <option value="3">A-</option>
-            <option value="4">A+</option>
-            <option value="5">B-</option>
-            <option value="6">B+</option>
-            <option value="7">AB-</option>
-            <option value="8">AB+</option>
-        </select>
-      </div>
+          <div class="form-group">
+            <label for="blood_type_id">Blood Type</label>
+            <select class="form-control"  id="blood_type_id" name="blood_type_id">
+              <option selected>Choose BloodType</option>
+              @foreach ($bloodTypes as $bloodType)
+                  <option value="{{$bloodType->id}}">{{$bloodType->name}}</option>
+              @endforeach
+            </select>
+          </div>
 
       <div class="form-group">
         <label  for="city_id">Select City</label>

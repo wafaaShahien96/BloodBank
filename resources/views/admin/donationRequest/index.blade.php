@@ -30,7 +30,7 @@
             <table class=" table table-bordered table-striped table-hover datatable">
                 <thead>
                     <tr>
-                        <th width="40"></th>
+                        <th width="40">#</th>
                           <th>  patient_name    </th>
                           <th>  patient_phone    </th>
                           <th>  patient_age    </th>
@@ -42,8 +42,8 @@
                       
                      @foreach($donationRequests as $donationRequest)
                         <tr data-entry-id = {{$donationRequest->id}} >
-                         <td>         </td>
-                        <td> {{$donationRequest->patient_name }}</td>
+                            <td> {{$loop->iteration}}        </td>
+                            <td> {{$donationRequest->patient_name }}</td>
                         <td> {{$donationRequest->patient_phone }}</td>
                         <td> {{$donationRequest->patient_age }}</td>
                        <td> 

@@ -106,10 +106,6 @@ class MainController extends Controller
         return responseJson(1 , 'loaded' , $posts);
     }
 
-    public function notification(Request $request){
-
-    }
-
     public function notificationSettings(Request $request){
                  
             if($request->has('governorate_id'))
@@ -145,10 +141,7 @@ class MainController extends Controller
          return responseJson(0, $validator->errors()->first(),$validator->errors());
          }
          $donationRequest = DonationRequest::Create($request->all());
-        //  dd($donationRequest);
-
-        
-        
+         return responseJson(1 , 'successful' ,$contact);
     
       }
 

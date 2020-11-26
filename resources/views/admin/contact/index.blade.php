@@ -33,7 +33,7 @@
             <table class=" table table-bordered table-striped table-hover datatable">
                 <thead>
                     <tr>
-                        <th width="40"></th>
+                        <th width="40">#</th>
                           <th>  name    </th>
                           <th>  email    </th>
                           <th>  phone    </th>
@@ -47,8 +47,8 @@
                       
                      @foreach($contacts as $contact)
                         <tr data-entry-id = {{$contact->id}} >
-                         <td>         </td>
-                        <td> {{$contact->name }}</td>
+                            <td> {{$loop->iteration}}        </td>
+                            <td> {{$contact->name }}</td>
                         <td> {{$contact->email }}</td>
                         <td> {{$contact->phone }}</td>
                         <td> {{$contact->subject }}</td>

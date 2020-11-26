@@ -34,7 +34,7 @@
             <table class=" table table-bordered table-striped table-hover datatable">
                 <thead>
                     <tr>
-                        <th width="40"></th>
+                        <th width="40">#</th>
                           <th>  id    </th>
                           <th>  name    </th>
                            <th>  &nbsp;  </th>
@@ -45,8 +45,8 @@
                       
                      @foreach($cities as $city)
                         <tr data-entry-id = {{$city->id}} >
-                         <td>         </td>
-                        <td> {{$city->governorate_id }}</td>
+                            <td> {{$loop->iteration}}        </td>
+                            <td> {{$city->governorate_id }}</td>
                         <td> {{$city->name }}</td>
                        <td>
                          <a class="btn btn-sm btn-danger" href="{{route('admin.city.edit' , $city->id )}}"> Edit </a> 

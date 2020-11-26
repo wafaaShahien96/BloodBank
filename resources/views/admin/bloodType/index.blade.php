@@ -33,7 +33,7 @@
             <table class=" table table-bordered table-striped table-hover datatable">
                 <thead>
                     <tr>
-                        <th width="40"></th>
+                        <th width="40"> #</th>
                           <th>  bloodType    </th>
                     </tr>
                 </thead>
@@ -42,8 +42,8 @@
                       
                      @foreach($bloodTypes as $bloodType)
                         <tr data-entry-id = {{$bloodType->id}} >
-                         <td>         </td>
-                        <td> {{$bloodType->name }}</td>
+                            <td> {{$loop->iteration}}        </td>
+                            <td> {{$bloodType->name }}</td>
                       
                         </tr>
                      @endforeach 

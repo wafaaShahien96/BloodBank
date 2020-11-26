@@ -40,7 +40,7 @@
 
       <div class="form-group">
         <label for="patient_age">Patient Age</label>
-        <input type="text" class="form-control" id="patient_age" name="patient_age" placeholder="patient_age" value="{{$donationRequest->patient_age}}" >
+        <input type="date" class="form-control" id="patient_age" name="patient_age" placeholder="patient_age" value="{{$donationRequest->patient_age}}" >
       </div>
 
       <div class="form-group">

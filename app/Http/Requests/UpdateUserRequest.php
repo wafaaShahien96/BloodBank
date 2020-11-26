@@ -16,8 +16,6 @@ class UpdateUserRequest extends FormRequest
     {
         return [
             'name' =>'required',
-            'email' => 'required|between:3,64|email|unique:users',
-            'password' => 'required',
             'roles.*'  => [
                 'integer',
             ],

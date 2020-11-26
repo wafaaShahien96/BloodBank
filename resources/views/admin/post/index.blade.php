@@ -32,7 +32,7 @@
             <table class="table table-bordered table-striped table-hover data-table">
                 <thead>
                     <tr>
-                        <th width="40"></th>
+                        <th width="40">#</th>
                           <th>  title    </th>
                           <th>  image    </th>
                           <th>  content    </th>
@@ -43,8 +43,8 @@
                 <tbody>
                     @foreach ($posts as $post)
                     <tr data-entry-id = {{$post->id}}>
-                     <td>         </td>
-                    <td> {{$post->title }}</td>
+                        <td> {{$loop->iteration}}        </td>
+                        <td> {{$post->title }}</td>
                   <td><img src="{{ asset('/storage/'.$post->image ) }}" width="50"> </td>  
                     <td> {{$post->content }}</td>
                     <td> {{$post->category_id }}</td>
