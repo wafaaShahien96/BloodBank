@@ -10,6 +10,7 @@
         </ul>
     </div>
 @endif
+<div class="container-fluid">
 
     <div class="card">
         <div class="card-header">
@@ -27,6 +28,6 @@
               <button type="submit" class="btn btn-primary"> Update </button>
             </form>
         </div>
-
+    </div>
     </div>
 @endsection

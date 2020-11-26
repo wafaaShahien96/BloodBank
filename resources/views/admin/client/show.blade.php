@@ -23,7 +23,7 @@
                     </tr>
                     <tr>
                         <th> Date Of Birth </th>
-                    <td>{{$client->d_o_b}}</td>
+                    <td>{{$client->age}}</td>
                     </tr>
                     <tr>
                         <th> Last Donation Date </th>

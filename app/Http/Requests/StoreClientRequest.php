@@ -19,9 +19,15 @@ class StoreClientRequest extends FormRequest
             'phone' => 'required|digits:11',
             'email' => 'required|email|unique:clients',
             'password'=> 'required',
-            'd_o_b'=> 'required',
+            'age'=> 'required',
             'last_donation_date'=> 'required',
             'last_donation_date'=> 'required',
+            'blood_type_id.*'  => [
+                'integer',
+            ],
+            'blood_type_id'    => [
+                'required',
+            ],
         ];
     }
 

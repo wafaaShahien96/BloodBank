@@ -9,11 +9,11 @@ class BloodType extends Model
 
     protected $table = 'blood_types';
     public $timestamps = true;
-    protected $fillable = array('blood_type');
+    protected $fillable = array('name');
 
     public function client()
     {
-        return $this->hasMany('App\Models\Client');
+        return $this->hasOne('App\Models\Client');
     }
 
     public function donationRequest()

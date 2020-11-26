@@ -10,6 +10,7 @@
         </ul>
     </div>
 @endif
+<div class="container-fluid">
 
     <div class="card">
  
@@ -54,7 +55,7 @@
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
-
+    </div>
     </div>
 @endsection
 

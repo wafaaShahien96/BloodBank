@@ -4,19 +4,26 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Carbon\Carbon;
+
 
 class Client extends Authenticatable 
 {
 
     protected $table = 'clients';
     public $timestamps = true;
-    protected $fillable = array('name', 'phone', 'email', 'd_o_b', 'last_donation_date', 
+    protected $fillable = array('name', 'phone', 'email', 'age', 'last_donation_date', 
     'blood_type_id','password', 'city_id','pin_code'.'status');
     protected $hidden = array('password' ,'api_token');
 
     public function setPasswordAttribute($value)
     {
         $this->attributes['password'] = bcrypt($value);
+    }
+
+    public function getAgeAttribute()
+    {
+        return Carbon::parse($this->attributes['age'])->age;
     }
 
     public function bloodType()

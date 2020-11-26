@@ -10,12 +10,13 @@
         </ul>
     </div>
 @endif
+<div class="container-fluid">
 
     <div class="card">
         <div class="card-header">
             Edit City
         </div>
-
+    
         <div class="card-body">
         <form action="{{route('admin.city.update' , $city->id)}}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -27,6 +28,7 @@
               <button type="submit" class="btn btn-primary"> Update </button>
             </form>
         </div>
-
     </div>
+    </div>
+    
 @endsection

@@ -13,13 +13,13 @@ class CreateClientsTable extends Migration {
 			$table->string('name');
 			$table->string('phone');
 			$table->string('email');
-			$table->date('d_o_b');
+			$table->date('age');
 			$table->date('last_donation_date');
-			$table->integer('pin_code');
+			$table->integer('pin_code')->nullable();
 			$table->string('password');
 			$table->integer('blood_type_id')->unsigned();
 			$table->integer('city_id')->unsigned();
-			$table->enum('status', ['active','Not active']);
+			$table->enum('status', ['active','Not active'])->default('Not active');
 			$table->string('api_token', 60)->unique()->nullable();
 		});
 	}

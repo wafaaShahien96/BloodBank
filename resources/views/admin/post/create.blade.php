@@ -10,6 +10,7 @@
         </ul>
     </div>
 @endif
+<div class="container-fluid">
 
 <div class="card">
  
@@ -51,5 +52,6 @@
 
         </form>
     </div>
+</div>
 </div>
 @endsection

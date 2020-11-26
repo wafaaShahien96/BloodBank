@@ -68,16 +68,7 @@ class CreateForeignKeys extends Migration {
 						->onDelete('no action')
 						->onUpdate('no action');
 		});
-		Schema::table('blood-type-client', function(Blueprint $table) {
-			$table->foreign('blood_type_id')->references('id')->on('blood_types')
-						->onDelete('no action')
-						->onUpdate('no action');
-		});
-		Schema::table('blood-type-client', function(Blueprint $table) {
-			$table->foreign('client_id')->references('id')->on('clients')
-						->onDelete('no action')
-						->onUpdate('no action');
-		});
+		
 		Schema::table('client-governorate', function(Blueprint $table) {
 			$table->foreign('client_id')->references('id')->on('clients')
 						->onDelete('no action')

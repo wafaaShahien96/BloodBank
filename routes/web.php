@@ -11,9 +11,11 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){      Route::resource('governorates', 'GovernorateController');
+Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){  
+      Route::resource('governorates', 'GovernorateController');
       Route::resource('city', 'CityController');
       Route::resource('categories', 'CategoryController');
+      Route::resource('bloodtype', 'BloodTypeController');
       Route::resource('posts', 'PostController');
       Route::resource('clients', 'ClientController');
       Route::resource('contact', 'ContactController');

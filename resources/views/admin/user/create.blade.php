@@ -10,6 +10,7 @@
         </ul>
     </div>
 @endif
+<div class="container-fluid">
 
     <div class="card">
  

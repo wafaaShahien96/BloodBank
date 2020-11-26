@@ -10,6 +10,7 @@
         </ul>
     </div>
 @endif
+<div class="container-fluid">
 
 <div class="card">
  
@@ -39,13 +40,13 @@
 
     <div class="form-group">
         <label for="password">Password</label>
-        <input type="text" class="form-control" id="password" name="password" placeholder="password" >
+        <input type="password" class="form-control" id="password" name="password" placeholder="password" >
       </div>
 
       
     <div class="form-group">
-        <label for="d_o_b">Date of birth</label>
-        <input type="date" class="form-control" id="d_o_b" name="d_o_b" placeholder="d_o_b" >
+        <label for="age">Date of birth</label>
+        <input type="date" class="form-control" id="age" name="age" placeholder="age" >
       </div>
 
     <div class="form-group">
@@ -55,15 +56,11 @@
 
     <div class="form-group">
         <label for="blood_type_id">Blood Type</label>
-        <select  class="custom-select" type="text" id="blood_type_id" name="blood_type_id">
-            <option value="1">O-</option>
-            <option value="2">O</option>
-            <option value="3">A-</option>
-            <option value="4">A+</option>
-            <option value="5">B-</option>
-            <option value="6">B+</option>
-            <option value="7">AB-</option>
-            <option value="8">AB+</option>
+        <select class="form-control"  id="blood_type_id" name="blood_type_id">
+          <option selected>Choose BloodType</option>
+          @foreach ($bloodTypes as $bloodType)
+              <option value="{{$bloodType->id}}">{{$bloodType->name}}</option>
+          @endforeach
         </select>
       </div>
 
@@ -98,5 +95,5 @@
     </div>
 </div>
 
-    
+</div>
 @endsection

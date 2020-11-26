@@ -10,11 +10,13 @@
         </ul>
     </div>
 @endif
+<div class="container-fluid">
 
     <div class="card">
         <div class="card-header">
             Edit Category
         </div>
+        <div class="container-fluid">
 
         <div class="card-body">
         <form action="{{route('admin.categories.update' , $category->id)}}" method="POST" enctype="multipart/form-data">
@@ -29,4 +31,7 @@
         </div>
 
     </div>
+</div>
+</div>
+
 @endsection

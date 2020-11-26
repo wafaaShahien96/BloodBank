@@ -10,12 +10,14 @@
         </ul>
     </div>
 @endif
+<div class="container-fluid">
 
 <div class="card">
  
     <div class="card-header">
         Create Donation Request
     </div>
+    <div class="container-fluid">
 
     <div class="card-body">
     <form action="{{route('admin.donation_request.store')}}" method="POST" enctype="multipart/form-data">
@@ -108,6 +110,7 @@
       <button type="submit" class="btn btn-primary mt-2">Submit</button>
     </form>
     </div>
+</div>
 </div>
 @endsection
 

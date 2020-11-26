@@ -20,6 +20,7 @@
     </div>
 </div>
 </section>
+<div class="container-fluid">
 
 <div class="card">
 
@@ -71,7 +72,7 @@
             </table>
             </div>
           </div>
-     
+</div>
 </div>
  @endsection
 

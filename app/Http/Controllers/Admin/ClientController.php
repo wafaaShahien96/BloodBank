@@ -19,11 +19,12 @@ class ClientController extends Controller
     }
 
     public function create(){
-        return view('admin.client.create')->with('cities' , City::all());
+        return view('admin.client.create')->with('cities' , City::all())->with('bloodTypes' ,BloodType::all());
     }
 
     public function store(StoreClientRequest $request , Client $client){
         $client = Client::create($request->all());
+
         return redirect()->route('admin.clients.index')->with('status', 'Client Created Successfully!');;
 
     }

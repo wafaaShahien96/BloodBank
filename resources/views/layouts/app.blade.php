@@ -93,6 +93,13 @@
             </a>
           </li>
          
+          <li class="nav-item">
+          <a href="{{route('admin.bloodtype.index')}}" class="nav-link">
+              <i class="nav-icon fa fa-comment"></i>
+              <p>BloodTypes</p>
+            </a>
+          </li>
+         
         
           <li class="nav-item">
           <a href="{{route('admin.clients.index')}}" class="nav-link">
